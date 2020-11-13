@@ -3,23 +3,12 @@
 </h1>
 
 <p align="center">
-<<<<<<< HEAD
-<img alt="author" src="https://img.shields.io/static/v1?label=WesleyRodrigues&message=MIT&color=15C3D6&labelColor=000000">
-=======
-<img alt="author" src="https://img.shields.io/static/v1?label=WesleyRodrigues&message=Author&color=15C3D6&labelColor=000000">
->>>>>>> 1efdfeecda7a145c9dc0f2466e29c8b4f172f57c
-
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=15C3D6&labelColor=000000">
-
-
 </p>
 
 <h1 align="center">
     <img alt="Happy" title="Happy" src=".github/Home.png" />
 </h1>
-
-
-
 
 <br>
 
@@ -81,8 +70,6 @@ $ yarn start
 
 Released in 2020.
 This project is under the [MIT license](./LICENSE)
-<<<<<<< HEAD
+
 Made with ❤️ by [Wesley Rodrigues](https://github.com/wesleywcr)🤙👊
-=======
-Made with ❤️ by [Wesley Rodrigues](https://github.com/wesleywcr)🤙👊
->>>>>>> 1efdfeecda7a145c9dc0f2466e29c8b4f172f57c
+
