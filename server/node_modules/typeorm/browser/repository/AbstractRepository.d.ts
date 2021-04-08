@@ -20,12 +20,12 @@ export declare class AbstractRepository<Entity extends ObjectLiteral> {
      * Gets the original ORM repository for the entity that is managed by this repository.
      * If current repository does not manage any entity, then exception will be thrown.
      */
-    protected readonly repository: Repository<Entity>;
+    protected get repository(): Repository<Entity>;
     /**
      * Gets the original ORM tree repository for the entity that is managed by this repository.
      * If current repository does not manage any entity, then exception will be thrown.
      */
-    protected readonly treeRepository: TreeRepository<Entity>;
+    protected get treeRepository(): TreeRepository<Entity>;
     /**
      * Creates a new query builder for the repository's entity that can be used to build a sql query.
      * If current repository does not manage any entity, then exception will be thrown.

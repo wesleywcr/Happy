@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableExclusion = void 0;
 /**
  * Database's table exclusion constraint stored in this class.
  */

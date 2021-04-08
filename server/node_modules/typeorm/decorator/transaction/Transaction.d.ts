@@ -7,7 +7,7 @@ import { TransactionOptions } from "../options/TransactionOptions";
  * as a first parameter into the wrapped method.
  *
  * If you want to control at what position in your method parameters entity manager should be injected,
- * then use @TransactionEntityManager() decorator.
+ * then use @TransactionManager() decorator.
  *
  * If you want to use repositories instead of bare entity manager,
  * then use @TransactionRepository() decorator.

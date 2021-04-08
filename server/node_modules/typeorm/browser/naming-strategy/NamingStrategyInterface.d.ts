@@ -56,8 +56,13 @@ export interface NamingStrategyInterface {
     indexName(tableOrName: Table | string, columns: string[], where?: string): string;
     /**
      * Gets the name of the check constraint.
+     *
+     * "isEnum" parameter is used to indicate if this check constraint used
+     * to handle "simple-enum" type for databases that are not supporting "enum"
+     * type out of the box. If "true", constraint is ignored during CHECK constraints
+     * synchronization.
      */
-    checkConstraintName(tableOrName: Table | string, expression: string): string;
+    checkConstraintName(tableOrName: Table | string, expression: string, isEnum?: boolean): string;
     /**
      * Gets the name of the exclusion constraint.
      */

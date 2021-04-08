@@ -1,11 +1,11 @@
 import { getMetadataArgsStorage } from "../../";
 /**
- * Many-to-one relation allows to create type of relation when Entity1 can have single instance of Entity2, but
- * Entity2 can have a multiple instances of Entity1. Entity1 is an owner of the relationship, and storages Entity2 id
- * on its own side.
+ * A many-to-one relation allows creating the type of relation where Entity1 can have a single instance of Entity2, but
+ * Entity2 can have multiple instances of Entity1. Entity1 is the owner of the relationship, and stores the id of
+ * Entity2 on its side of the relation.
  */
 export function ManyToOne(typeFunctionOrTarget, inverseSideOrOptions, options) {
-    // normalize parameters
+    // Normalize parameters.
     var inverseSideProperty;
     if (typeof inverseSideOrOptions === "object") {
         options = inverseSideOrOptions;
@@ -16,7 +16,7 @@ export function ManyToOne(typeFunctionOrTarget, inverseSideOrOptions, options) {
     return function (object, propertyName) {
         if (!options)
             options = {};
-        // now try to determine it its lazy relation
+        // Now try to determine if it is a lazy relation.
         var isLazy = options && options.lazy === true ? true : false;
         if (!isLazy && Reflect && Reflect.getMetadata) { // automatic determination
             var reflectedType = Reflect.getMetadata("design:type", object, propertyName);

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VersionUtils = void 0;
 var VersionUtils = /** @class */ (function () {
     function VersionUtils() {
     }

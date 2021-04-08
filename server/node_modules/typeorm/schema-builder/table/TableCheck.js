@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableCheck = void 0;
 var tslib_1 = require("tslib");
 /**
  * Database's table check constraint stored in this class.
@@ -26,7 +27,7 @@ var TableCheck = /** @class */ (function () {
     TableCheck.prototype.clone = function () {
         return new TableCheck({
             name: this.name,
-            columnNames: this.columnNames ? tslib_1.__spread(this.columnNames) : [],
+            columnNames: this.columnNames ? tslib_1.__spreadArray([], tslib_1.__read(this.columnNames)) : [],
             expression: this.expression,
         });
     };

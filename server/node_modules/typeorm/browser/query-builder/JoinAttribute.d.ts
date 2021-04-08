@@ -34,24 +34,24 @@ export declare class JoinAttribute {
      */
     isMappingMany?: boolean;
     constructor(connection: Connection, queryExpressionMap: QueryExpressionMap, joinAttribute?: JoinAttribute);
-    readonly isMany: boolean;
+    get isMany(): boolean;
     isSelectedCache: boolean;
     isSelectedEvaluated: boolean;
     /**
      * Indicates if this join is selected.
      */
-    readonly isSelected: boolean;
+    get isSelected(): boolean;
     /**
      * Name of the table which we should join.
      */
-    readonly tablePath: string;
+    get tablePath(): string;
     /**
      * Alias of the parent of this join.
      * For example, if we join ("post.category", "categoryAlias") then "post" is a parent alias.
      * This value is extracted from entityOrProperty value.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly parentAlias: string | undefined;
+    get parentAlias(): string | undefined;
     /**
      * Relation property name of the parent.
      * This is used to understand what is joined.
@@ -59,7 +59,7 @@ export declare class JoinAttribute {
      * This value is extracted from entityOrProperty value.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly relationPropertyPath: string | undefined;
+    get relationPropertyPath(): string | undefined;
     relationCache: RelationMetadata | undefined;
     relationEvaluated: boolean;
     /**
@@ -68,16 +68,16 @@ export declare class JoinAttribute {
      * This is available when join was made using "post.category" syntax.
      * Relation can be undefined if entityOrProperty is regular entity or custom table.
      */
-    readonly relation: RelationMetadata | undefined;
+    get relation(): RelationMetadata | undefined;
     /**
      * Metadata of the joined entity.
      * If table without entity was joined, then it will return undefined.
      */
-    readonly metadata: EntityMetadata | undefined;
+    get metadata(): EntityMetadata | undefined;
     /**
      * Generates alias of junction table, whose ids we get.
      */
-    readonly junctionAlias: string;
-    readonly mapToPropertyParentAlias: string | undefined;
-    readonly mapToPropertyPropertyName: string | undefined;
+    get junctionAlias(): string;
+    get mapToPropertyParentAlias(): string | undefined;
+    get mapToPropertyPropertyName(): string | undefined;
 }

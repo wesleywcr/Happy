@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetadataUtils = void 0;
 /**
  * Metadata args utility functions.
  */

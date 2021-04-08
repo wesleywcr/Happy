@@ -15,7 +15,8 @@ export declare class Alias {
     subQuery?: string;
     constructor(alias?: Alias);
     private _metadata?;
-    readonly target: Function | string;
-    readonly hasMetadata: boolean;
-    metadata: EntityMetadata;
+    get target(): Function | string;
+    get hasMetadata(): boolean;
+    set metadata(metadata: EntityMetadata);
+    get metadata(): EntityMetadata;
 }

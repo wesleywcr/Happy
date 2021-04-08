@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableUnique = void 0;
 var tslib_1 = require("tslib");
 /**
  * Database's table unique constraint stored in this class.
@@ -25,7 +26,7 @@ var TableUnique = /** @class */ (function () {
     TableUnique.prototype.clone = function () {
         return new TableUnique({
             name: this.name,
-            columnNames: tslib_1.__spread(this.columnNames)
+            columnNames: tslib_1.__spreadArray([], tslib_1.__read(this.columnNames))
         });
     };
     // -------------------------------------------------------------------------

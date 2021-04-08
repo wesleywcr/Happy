@@ -1,7 +1,7 @@
 /**
  * Column types used for @PrimaryGeneratedColumn() decorator.
  */
-export declare type PrimaryGeneratedColumnType = "int" | "int2" | "int4" | "int8" | "integer" | "tinyint" | "smallint" | "mediumint" | "bigint" | "dec" | "decimal" | "smalldecimal" | "fixed" | "numeric" | "number" | "uuid";
+export declare type PrimaryGeneratedColumnType = "int" | "int2" | "int4" | "int8" | "integer" | "tinyint" | "smallint" | "mediumint" | "bigint" | "dec" | "decimal" | "smalldecimal" | "fixed" | "numeric" | "number";
 /**
  * Column types where spatial properties are used.
  */

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqljsEntityManager = void 0;
 var tslib_1 = require("tslib");
 var EntityManager_1 = require("./EntityManager");
 /**

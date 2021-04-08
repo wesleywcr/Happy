@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableIndex = void 0;
 var tslib_1 = require("tslib");
 /**
  * Database's table index stored in this class.
@@ -30,7 +31,7 @@ var TableIndex = /** @class */ (function () {
     TableIndex.prototype.clone = function () {
         return new TableIndex({
             name: this.name,
-            columnNames: tslib_1.__spread(this.columnNames),
+            columnNames: tslib_1.__spreadArray([], tslib_1.__read(this.columnNames)),
             isUnique: this.isUnique,
             isSpatial: this.isSpatial,
             isFulltext: this.isFulltext,

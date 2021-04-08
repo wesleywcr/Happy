@@ -28,14 +28,14 @@ export declare class RelationIdAttribute {
      */
     disableMixedMap: boolean;
     constructor(queryExpressionMap: QueryExpressionMap, relationIdAttribute?: Partial<RelationIdAttribute>);
-    readonly joinInverseSideMetadata: EntityMetadata;
+    get joinInverseSideMetadata(): EntityMetadata;
     /**
      * Alias of the parent of this join.
      * For example, if we join ("post.category", "categoryAlias") then "post" is a parent alias.
      * This value is extracted from entityOrProperty value.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly parentAlias: string;
+    get parentAlias(): string;
     /**
      * Relation property name of the parent.
      * This is used to understand what is joined.
@@ -43,22 +43,22 @@ export declare class RelationIdAttribute {
      * This value is extracted from entityOrProperty value.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly relationPropertyPath: string;
+    get relationPropertyPath(): string;
     /**
      * Relation of the parent.
      * This is used to understand what is joined.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly relation: RelationMetadata;
+    get relation(): RelationMetadata;
     /**
      * Generates alias of junction table, whose ids we get.
      */
-    readonly junctionAlias: string;
+    get junctionAlias(): string;
     /**
      * Metadata of the joined entity.
      * If extra condition without entity was joined, then it will return undefined.
      */
-    readonly junctionMetadata: EntityMetadata;
-    readonly mapToPropertyParentAlias: string;
-    readonly mapToPropertyPropertyPath: string;
+    get junctionMetadata(): EntityMetadata;
+    get mapToPropertyParentAlias(): string;
+    get mapToPropertyPropertyPath(): string;
 }

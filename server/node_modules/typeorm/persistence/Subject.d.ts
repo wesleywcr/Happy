@@ -122,25 +122,25 @@ export declare class Subject {
      * Subject can be inserted into the database if it is allowed to be inserted (explicitly persisted or by cascades)
      * and if it does not have database entity set.
      */
-    readonly mustBeInserted: boolean;
+    get mustBeInserted(): boolean;
     /**
      * Checks if this subject must be updated into the database.
      * Subject can be updated in the database if it is allowed to be updated (explicitly persisted or by cascades)
      * and if it does have differentiated columns or relations.
      */
-    readonly mustBeUpdated: boolean | undefined;
+    get mustBeUpdated(): boolean | undefined;
     /**
      * Checks if this subject must be soft-removed into the database.
      * Subject can be updated in the database if it is allowed to be soft-removed (explicitly persisted or by cascades)
      * and if it does have differentiated columns or relations.
      */
-    readonly mustBeSoftRemoved: boolean | ObjectLiteral | undefined;
+    get mustBeSoftRemoved(): boolean | ObjectLiteral | undefined;
     /**
      * Checks if this subject must be recovered into the database.
      * Subject can be updated in the database if it is allowed to be recovered (explicitly persisted or by cascades)
      * and if it does have differentiated columns or relations.
      */
-    readonly mustBeRecovered: boolean | ObjectLiteral | undefined;
+    get mustBeRecovered(): boolean | ObjectLiteral | undefined;
     /**
      * Creates a value set needs to be inserted / updated in the database.
      * Value set is based on the entity and change maps of the subject.

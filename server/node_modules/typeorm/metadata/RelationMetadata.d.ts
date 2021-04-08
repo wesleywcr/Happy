@@ -90,6 +90,10 @@ export declare class RelationMetadata {
      */
     persistenceEnabled: boolean;
     /**
+     * When a child row is removed from its parent, determines if the child row should be orphaned (default) or deleted.
+     */
+    orphanedRowAction?: "nullify" | "delete";
+    /**
      * If set to true then related objects are allowed to be inserted to the database.
      */
     isCascadeInsert: boolean;
@@ -125,6 +129,12 @@ export declare class RelationMetadata {
      * What to do with a relation on update of the row containing a foreign key.
      */
     deferrable?: DeferrableType;
+    /**
+     * Indicates whether foreign key constraints will be created for join columns.
+     * Can be used only for many-to-one and owner one-to-one relations.
+     * Defaults to true.
+     */
+    createForeignKeyConstraints: boolean;
     /**
      * Gets the property's type to which this relation is applied.
      *
@@ -256,6 +266,11 @@ export declare class RelationMetadata {
      * This builder method should be used to register foreign key in the relation.
      */
     registerForeignKeys(...foreignKeys: ForeignKeyMetadata[]): void;
+    /**
+     * Registers given join columns in the relation.
+     * This builder method should be used to register join column in the relation.
+     */
+    registerJoinColumns(joinColumns?: ColumnMetadata[], inverseJoinColumns?: ColumnMetadata[]): void;
     /**
      * Registers a given junction entity metadata.
      * This builder method can be called after junction entity metadata for the many-to-many relation was created.

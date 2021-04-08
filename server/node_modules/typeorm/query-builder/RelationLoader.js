@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationLoader = void 0;
 var tslib_1 = require("tslib");
 /**
  * Wraps entities and creates getters/setters for their relations
@@ -131,7 +132,7 @@ var RelationLoader = /** @class */ (function () {
             .createQueryBuilder(queryRunner)
             .select(mainAlias)
             .from(relation.type, mainAlias)
-            .innerJoin(joinAlias, joinAlias, tslib_1.__spread(joinColumnConditions, inverseJoinColumnConditions).join(" AND "))
+            .innerJoin(joinAlias, joinAlias, tslib_1.__spreadArray(tslib_1.__spreadArray([], tslib_1.__read(joinColumnConditions)), tslib_1.__read(inverseJoinColumnConditions)).join(" AND "))
             .setParameters(parameters)
             .getMany();
     };
@@ -162,7 +163,7 @@ var RelationLoader = /** @class */ (function () {
             .createQueryBuilder(queryRunner)
             .select(mainAlias)
             .from(relation.type, mainAlias)
-            .innerJoin(joinAlias, joinAlias, tslib_1.__spread(joinColumnConditions, inverseJoinColumnConditions).join(" AND "))
+            .innerJoin(joinAlias, joinAlias, tslib_1.__spreadArray(tslib_1.__spreadArray([], tslib_1.__read(joinColumnConditions)), tslib_1.__read(inverseJoinColumnConditions)).join(" AND "))
             .setParameters(parameters)
             .getMany();
     };
@@ -197,7 +198,7 @@ var RelationLoader = /** @class */ (function () {
                 if (this[promiseIndex]) // if related data is loading then return a promise relationLoader loads it
                     return this[promiseIndex];
                 // nothing is loaded yet, load relation data and save it in the model once they are loaded
-                var loader = relationLoader.load(relation, this, queryRunner).then(function (result) { return relation.isOneToOne || relation.isManyToOne ? result[0] : result; });
+                var loader = relationLoader.load(relation, this, queryRunner).then(function (result) { return relation.isOneToOne || relation.isManyToOne ? (result.length === 0 ? null : result[0]) : result; });
                 return setPromise(this, loader);
             },
             set: function (value) {

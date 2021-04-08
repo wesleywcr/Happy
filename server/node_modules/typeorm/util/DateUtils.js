@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateUtils = void 0;
 var tslib_1 = require("tslib");
 /**
  * Provides utilities to transform hydrated and persisted data.
@@ -147,13 +148,7 @@ var DateUtils = /** @class */ (function () {
         return JSON.stringify(value);
     };
     DateUtils.stringToSimpleJson = function (value) {
-        try {
-            var simpleJSON = JSON.parse(value);
-            return (typeof simpleJSON === "object") ? simpleJSON : {};
-        }
-        catch (err) {
-            return {};
-        }
+        return typeof value === "string" ? JSON.parse(value) : value;
     };
     DateUtils.simpleEnumToString = function (value) {
         return "" + value;

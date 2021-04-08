@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BroadcasterResult = void 0;
 /**
  * Broadcaster execution result - promises executed by operations and number of executed listeners and subscribers.
  */

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositoryFactory = void 0;
 var TreeRepository_1 = require("./TreeRepository");
 var Repository_1 = require("./Repository");
 var MongoDriver_1 = require("../driver/mongodb/MongoDriver");

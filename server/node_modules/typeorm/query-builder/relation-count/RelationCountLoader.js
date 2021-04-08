@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationCountLoader = void 0;
 var tslib_1 = require("tslib");
 var RelationCountLoader = /** @class */ (function () {
     // -------------------------------------------------------------------------
@@ -22,7 +23,8 @@ var RelationCountLoader = /** @class */ (function () {
                     return self.indexOf(value) === index;
                 };
                 promises = this.relationCountAttributes.map(function (relationCountAttr) { return tslib_1.__awaiter(_this, void 0, void 0, function () {
-                    var relation, inverseRelation, referenceColumnName_1, inverseSideTable, inverseSideTableName, inverseSideTableAlias, inverseSidePropertyName, referenceColumnValues, qb, _a, joinTableColumnName_1, inverseJoinColumnName, firstJunctionColumn, secondJunctionColumn, referenceColumnValues, junctionAlias, inverseSideTableName, inverseSideTableAlias, junctionTableName, condition, qb, _b;
+                    var relation, inverseRelation, referenceColumnName_1, inverseSideTable, inverseSideTableName, inverseSideTableAlias, inverseSidePropertyName, referenceColumnValues, qb, joinTableColumnName_1, inverseJoinColumnName, firstJunctionColumn, secondJunctionColumn, referenceColumnValues, junctionAlias, inverseSideTableName, inverseSideTableAlias, junctionTableName, condition, qb;
+                    var _a, _b;
                     return tslib_1.__generator(this, function (_c) {
                         switch (_c.label) {
                             case 0:

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Broadcaster = void 0;
 /**
  * Broadcaster provides a helper methods to broadcast events to the subscribers.
  */
@@ -158,6 +159,126 @@ var Broadcaster = /** @class */ (function () {
                         manager: _this.queryRunner.manager,
                         entity: entity,
                         metadata: metadata
+                    });
+                    if (executionResult instanceof Promise)
+                        result.promises.push(executionResult);
+                    result.count++;
+                }
+            });
+        }
+    };
+    /**
+     * Broadcasts "BEFORE_TRANSACTION_START" event.
+     */
+    Broadcaster.prototype.broadcastBeforeTransactionStartEvent = function (result) {
+        var _this = this;
+        if (this.queryRunner.connection.subscribers.length) {
+            this.queryRunner.connection.subscribers.forEach(function (subscriber) {
+                if (subscriber.beforeTransactionStart) {
+                    var executionResult = subscriber.beforeTransactionStart({
+                        connection: _this.queryRunner.connection,
+                        queryRunner: _this.queryRunner,
+                        manager: _this.queryRunner.manager,
+                    });
+                    if (executionResult instanceof Promise)
+                        result.promises.push(executionResult);
+                    result.count++;
+                }
+            });
+        }
+    };
+    /**
+     * Broadcasts "AFTER_TRANSACTION_START" event.
+     */
+    Broadcaster.prototype.broadcastAfterTransactionStartEvent = function (result) {
+        var _this = this;
+        if (this.queryRunner.connection.subscribers.length) {
+            this.queryRunner.connection.subscribers.forEach(function (subscriber) {
+                if (subscriber.afterTransactionStart) {
+                    var executionResult = subscriber.afterTransactionStart({
+                        connection: _this.queryRunner.connection,
+                        queryRunner: _this.queryRunner,
+                        manager: _this.queryRunner.manager,
+                    });
+                    if (executionResult instanceof Promise)
+                        result.promises.push(executionResult);
+                    result.count++;
+                }
+            });
+        }
+    };
+    /**
+     * Broadcasts "BEFORE_TRANSACTION_COMMIT" event.
+     */
+    Broadcaster.prototype.broadcastBeforeTransactionCommitEvent = function (result) {
+        var _this = this;
+        if (this.queryRunner.connection.subscribers.length) {
+            this.queryRunner.connection.subscribers.forEach(function (subscriber) {
+                if (subscriber.beforeTransactionCommit) {
+                    var executionResult = subscriber.beforeTransactionCommit({
+                        connection: _this.queryRunner.connection,
+                        queryRunner: _this.queryRunner,
+                        manager: _this.queryRunner.manager,
+                    });
+                    if (executionResult instanceof Promise)
+                        result.promises.push(executionResult);
+                    result.count++;
+                }
+            });
+        }
+    };
+    /**
+     * Broadcasts "AFTER_TRANSACTION_COMMIT" event.
+     */
+    Broadcaster.prototype.broadcastAfterTransactionCommitEvent = function (result) {
+        var _this = this;
+        if (this.queryRunner.connection.subscribers.length) {
+            this.queryRunner.connection.subscribers.forEach(function (subscriber) {
+                if (subscriber.afterTransactionCommit) {
+                    var executionResult = subscriber.afterTransactionCommit({
+                        connection: _this.queryRunner.connection,
+                        queryRunner: _this.queryRunner,
+                        manager: _this.queryRunner.manager,
+                    });
+                    if (executionResult instanceof Promise)
+                        result.promises.push(executionResult);
+                    result.count++;
+                }
+            });
+        }
+    };
+    /**
+     * Broadcasts "BEFORE_TRANSACTION_ROLLBACK" event.
+     */
+    Broadcaster.prototype.broadcastBeforeTransactionRollbackEvent = function (result) {
+        var _this = this;
+        if (this.queryRunner.connection.subscribers.length) {
+            this.queryRunner.connection.subscribers.forEach(function (subscriber) {
+                if (subscriber.beforeTransactionRollback) {
+                    var executionResult = subscriber.beforeTransactionRollback({
+                        connection: _this.queryRunner.connection,
+                        queryRunner: _this.queryRunner,
+                        manager: _this.queryRunner.manager,
+                    });
+                    if (executionResult instanceof Promise)
+                        result.promises.push(executionResult);
+                    result.count++;
+                }
+            });
+        }
+    };
+    /**
+     * Broadcasts "AFTER_TRANSACTION_ROLLBACK" event.
+     */
+    Broadcaster.prototype.broadcastAfterTransactionRollbackEvent = function (result) {
+        var _this = this;
+        if (this.queryRunner.connection.subscribers.length) {
+            this.queryRunner.connection.subscribers.forEach(function (subscriber) {
+                if (subscriber.afterTransactionRollback) {
+                    var executionResult = subscriber.afterTransactionRollback({
+                        connection: _this.queryRunner.connection,
+                        queryRunner: _this.queryRunner,
+                        manager: _this.queryRunner.manager,
                     });
                     if (executionResult instanceof Promise)
                         result.promises.push(executionResult);

@@ -17,11 +17,13 @@ export interface AuroraDataApiPostgresConnectionOptions extends BaseConnectionOp
      * If uuid-ossp is selected, TypeORM will use the uuid_generate_v4() function from this extension.
      */
     readonly uuidExtension?: "pgcrypto" | "uuid-ossp";
+    readonly transformParameters?: boolean;
     readonly poolErrorHandler?: (err: any) => any;
     readonly serviceConfigOptions?: {
         [key: string]: any;
     };
     readonly formatOptions?: {
         [key: string]: any;
+        castParameters: boolean;
     };
 }

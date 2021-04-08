@@ -39,7 +39,7 @@ export declare class Repository<Entity extends ObjectLiteral> {
      * If this repository manages entity from schema,
      * then it returns a name of that schema instead.
      */
-    readonly target: Function | string;
+    get target(): Function | string;
     /**
      * Checks if entity has an id.
      * If entity composite compose ids, it will check them all.
@@ -54,13 +54,13 @@ export declare class Repository<Entity extends ObjectLiteral> {
      */
     create(): Entity;
     /**
-     * Creates a new entities and copies all entity properties from given objects into their new entities.
-     * Note that it copies only properties that present in entity schema.
+     * Creates new entities and copies all entity properties from given objects into their new entities.
+     * Note that it copies only properties that are present in entity schema.
      */
     create(entityLikeArray: DeepPartial<Entity>[]): Entity[];
     /**
      * Creates a new entity instance and copies all entity properties from this object into a new entity.
-     * Note that it copies only properties that present in entity schema.
+     * Note that it copies only properties that are present in entity schema.
      */
     create(entityLike: DeepPartial<Entity>): Entity;
     /**

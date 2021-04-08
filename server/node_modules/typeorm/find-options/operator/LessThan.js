@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LessThan = void 0;
 var FindOperator_1 = require("../FindOperator");
 /**
  * Find Options Operator.

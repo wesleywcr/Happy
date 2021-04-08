@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MssqlParameter = void 0;
 /**
  * Sql server driver requires parameter types to be specified fo input parameters used in the query.
  *

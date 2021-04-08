@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationCountMetadataToAttributeTransformer = void 0;
 var RelationCountAttribute_1 = require("./RelationCountAttribute");
 var RelationCountMetadataToAttributeTransformer = /** @class */ (function () {
     // -------------------------------------------------------------------------

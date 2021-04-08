@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoggerFactory = void 0;
 var SimpleConsoleLogger_1 = require("./SimpleConsoleLogger");
 var AdvancedConsoleLogger_1 = require("./AdvancedConsoleLogger");
 var FileLogger_1 = require("./FileLogger");

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleConsoleLogger = void 0;
 /**
  * Performs logging of the events in TypeORM.
  * This version of logger uses console to log events and does not use syntax highlighting.

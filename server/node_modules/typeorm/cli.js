@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
 require("reflect-metadata");
-var yargs = tslib_1.__importStar(require("yargs"));
+var yargs_1 = tslib_1.__importDefault(require("yargs"));
 var SchemaSyncCommand_1 = require("./commands/SchemaSyncCommand");
 var SchemaDropCommand_1 = require("./commands/SchemaDropCommand");
 var QueryCommand_1 = require("./commands/QueryCommand");
@@ -18,7 +18,7 @@ var MigrationGenerateCommand_1 = require("./commands/MigrationGenerateCommand");
 var VersionCommand_1 = require("./commands/VersionCommand");
 var InitCommand_1 = require("./commands/InitCommand");
 var CacheClearCommand_1 = require("./commands/CacheClearCommand");
-yargs
+yargs_1.default
     .usage("Usage: $0 <command> [options]")
     .command(new SchemaSyncCommand_1.SchemaSyncCommand())
     .command(new SchemaLogCommand_1.SchemaLogCommand())

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableColumn = void 0;
 /**
  * Table's columns in the database represented in this class.
  */

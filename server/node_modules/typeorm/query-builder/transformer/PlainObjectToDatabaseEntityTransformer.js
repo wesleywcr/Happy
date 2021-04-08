@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlainObjectToDatabaseEntityTransformer = void 0;
 var tslib_1 = require("tslib");
 /**
  */
@@ -14,14 +15,14 @@ var LoadMapItem = /** @class */ (function () {
         get: function () {
             return this.metadata.target;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(LoadMapItem.prototype, "id", {
         get: function () {
             return this.metadata.getEntityIdMixedMap(this.plainEntity);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return LoadMapItem;
@@ -34,7 +35,7 @@ var LoadMap = /** @class */ (function () {
         get: function () {
             return this.loadMapItems.find(function (item) { return !item.relation && !item.parentLoadMapItem; });
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     LoadMap.prototype.addLoadMap = function (newLoadMap) {

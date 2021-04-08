@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntityManagerFactory = void 0;
 var EntityManager_1 = require("./EntityManager");
 var MongoEntityManager_1 = require("./MongoEntityManager");
 var MongoDriver_1 = require("../driver/mongodb/MongoDriver");

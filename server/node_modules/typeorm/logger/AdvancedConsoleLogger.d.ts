@@ -1,3 +1,4 @@
+import { LoggerOptions } from "./LoggerOptions";
 import { QueryRunner } from "../query-runner/QueryRunner";
 import { Logger } from "./Logger";
 /**
@@ -6,7 +7,7 @@ import { Logger } from "./Logger";
  */
 export declare class AdvancedConsoleLogger implements Logger {
     private options?;
-    constructor(options?: boolean | "all" | ("log" | "info" | "warn" | "query" | "schema" | "error" | "migration")[] | undefined);
+    constructor(options?: LoggerOptions | undefined);
     /**
      * Logs query and parameters used in it.
      */

@@ -94,4 +94,10 @@ export declare class InsertQueryBuilder<Entity> extends QueryBuilder<Entity> {
      * Gets array of values need to be inserted into the target table.
      */
     protected getValueSets(): ObjectLiteral[];
+    /**
+     * Checks if column is an auto-generated primary key, but the current insertion specifies a value for it.
+     *
+     * @param column
+     */
+    protected isOverridingAutoIncrementBehavior(column: ColumnMetadata): boolean;
 }

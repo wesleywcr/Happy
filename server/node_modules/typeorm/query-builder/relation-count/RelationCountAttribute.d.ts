@@ -21,14 +21,14 @@ export declare class RelationCountAttribute {
      */
     queryBuilderFactory?: (qb: SelectQueryBuilder<any>) => SelectQueryBuilder<any>;
     constructor(expressionMap: QueryExpressionMap, relationCountAttribute?: Partial<RelationCountAttribute>);
-    readonly joinInverseSideMetadata: EntityMetadata;
+    get joinInverseSideMetadata(): EntityMetadata;
     /**
      * Alias of the parent of this join.
      * For example, if we join ("post.category", "categoryAlias") then "post" is a parent alias.
      * This value is extracted from entityOrProperty value.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly parentAlias: string;
+    get parentAlias(): string;
     /**
      * Relation property name of the parent.
      * This is used to understand what is joined.
@@ -36,18 +36,18 @@ export declare class RelationCountAttribute {
      * This value is extracted from entityOrProperty value.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly relationProperty: string | undefined;
-    readonly junctionAlias: string;
+    get relationProperty(): string | undefined;
+    get junctionAlias(): string;
     /**
      * Relation of the parent.
      * This is used to understand what is joined.
      * This is available when join was made using "post.category" syntax.
      */
-    readonly relation: RelationMetadata;
+    get relation(): RelationMetadata;
     /**
      * Metadata of the joined entity.
      * If table without entity was joined, then it will return undefined.
      */
-    readonly metadata: EntityMetadata;
-    readonly mapToPropertyPropertyName: string;
+    get metadata(): EntityMetadata;
+    get mapToPropertyPropertyName(): string;
 }

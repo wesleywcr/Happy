@@ -42,6 +42,7 @@ export declare class RelationJoinColumnBuilder {
      */
     build(joinColumns: JoinColumnMetadataArgs[], relation: RelationMetadata): {
         foreignKey: ForeignKeyMetadata | undefined;
+        columns: ColumnMetadata[];
         uniqueConstraint: UniqueMetadata | undefined;
     };
     /**

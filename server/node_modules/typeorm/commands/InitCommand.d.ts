@@ -15,8 +15,11 @@ export declare class InitCommand implements yargs.CommandModule {
         express: unknown;
     } & {
         docker: unknown;
+    } & {
+        pm: string;
     }>;
     handler(args: yargs.Arguments): Promise<void>;
+    protected static executeCommand(command: string): Promise<string>;
     /**
      * Gets contents of the ormconfig file.
      */

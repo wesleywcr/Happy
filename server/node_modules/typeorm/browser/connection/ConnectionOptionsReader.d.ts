@@ -52,13 +52,13 @@ export declare class ConnectionOptionsReader {
     /**
      * Gets directory where configuration file should be located and configuration file name.
      */
-    protected readonly baseFilePath: string;
+    protected get baseFilePath(): string;
     /**
      * Gets directory where configuration file should be located.
      */
-    protected readonly baseDirectory: string;
+    protected get baseDirectory(): string;
     /**
      * Gets configuration file name.
      */
-    protected readonly baseConfigName: string;
+    protected get baseConfigName(): string;
 }

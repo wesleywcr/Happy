@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationIdMetadataToAttributeTransformer = void 0;
 var RelationIdAttribute_1 = require("./RelationIdAttribute");
 var RelationIdMetadataToAttributeTransformer = /** @class */ (function () {
     // -------------------------------------------------------------------------
